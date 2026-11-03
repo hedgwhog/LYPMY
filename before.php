@@ -2,6 +2,8 @@
     session_start();
     $msg = $_SESSION['accountmsg'];
     $_SESSION['accountmsg'] = '';
+
+    if (isset($_SESSION['user'])) { header('location: home.php'); }
 ?>
 
 <!DOCTYPE html>
